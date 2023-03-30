@@ -73,7 +73,7 @@
 
 - Eğer alpha-1 testnet node'u çalıştırdıysanız, önce eski volumleri kaldırmak için `docker-compose down -v` komutunu çalıştırmanız gerekir.
 
-- Ayrıca, genesis bloğundan senkronize etmek biraz zaman alabilir. Bu ilerlemeyi loglar ile veya yerel grafana  kontrol panelinde izleyebilirsiniz. Güncel L2 block durumunu [Taiko alpha-2 block explorer] (https://explorer.a2.taiko.xyz/) görebilirsiniz.
+- Ayrıca, genesis bloğundan senkronize etmek biraz zaman alabilir. Bu ilerlemeyi loglar ile veya yerel grafana  kontrol panelinde izleyebilirsiniz. Güncel L2 block durumunu [Taiko alpha-2 block explorer](https://explorer.a2.taiko.xyz) görebilirsiniz.
 
 - Docker'ın çalıştığından emin olun ve ardından node'u başlatmak için aşağıdaki komutu çalıştırın. Eğer arka planda çalıştırmak istiyorsanız, lütfen `-d` flag'ını ekleyin (`docker-compose up -d`).
 
