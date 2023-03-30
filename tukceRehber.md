@@ -78,7 +78,7 @@
 - Docker'ın çalıştığından emin olun ve ardından node'u başlatmak için aşağıdaki komutu çalıştırın. Eğer arka planda çalıştırmak istiyorsanız, lütfen `-d` flag'ını ekleyin (`docker-compose up -d`).
 
   ```bash
-  sudo docker-compose yukarı
+  sudo docker-compose up
   ```
 
 - Node'u arka planda çalıştırmak için (`detached mode`) `-d` flag'ını kullanın:
@@ -109,7 +109,7 @@
 10. Node'u durdurmak için
 
 ```bash
-sudo docker-compose aşağı
+sudo docker-compose down
 ```
 
 11. Node'u kaldırmak için
