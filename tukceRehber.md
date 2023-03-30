@@ -44,86 +44,86 @@
 
 5. Node'unuzu yapılandırın (gerekli)
 
-- İlk olarak, .env.sample dosyasını yeni bir .env dosyasına kopyalayın:
+    - İlk olarak, .env.sample dosyasını yeni bir .env dosyasına kopyalayın:
 
-  ```bash
-    cp .env.sample .env
-  ```
+      ```bash
+      cp .env.sample .env
+      ```
 
-- Ardından, .env dosyasını tercih ettiğiniz metin düzenleyicisinde açın:
+    - Ardından, .env dosyasını tercih ettiğiniz metin düzenleyicisinde açın:
 
-  ```bash
-    nano .env
-  ```
+      ```bash
+      nano .env
+      ```
 
-- Son olarak, aşağıdaki ortam değişkenlerini ayarlayın:
+    - Son olarak, aşağıdaki ortam değişkenlerini ayarlayın:
 
-  ```bash
-  L1_ENDPOINT_HTTP=https://eth-mainnet.alchemyapi.io/v2/<YOUR-ALCHEMY-API-KEY>
-  L1_ENDPOINT_WS=wss://eth-mainnet.ws.alchemyapi.io/v2/<YOUR-ALCHEMY-API-KEY>
-  ```
+      ```bash
+      L1_ENDPOINT_HTTP=https://eth-mainnet.alchemyapi.io/v2/<YOUR-ALCHEMY-API-KEY>
+      L1_ENDPOINT_WS=wss://eth-mainnet.ws.alchemyapi.io/v2/<YOUR-ALCHEMY-API-KEY>
+      ```
 
-  Birkaç yerden Sepolia L1 uç noktası alabilirsiniz, Alchemy ve Infura iki popüler RPC sağlayıcısıdır. RPC'yi Ethereum mainnet olarak değil Sepolia testnet olarak seçtiğinizden emin olun.
+    Birkaç yerden Sepolia L1 uç noktası alabilirsiniz, Alchemy ve Infura iki popüler RPC sağlayıcısıdır. RPC'yi Ethereum mainnet olarak değil Sepolia testnet olarak seçtiğinizden emin olun.
 
 6. Node'unuzu prover olarak etkinleştirin (bir prover çalıştırmak istiyorsanız, isteğe bağlıdır.)
 
-- Daha fazla bilgi için [prover etkinleştirme](https://taiko.xyz/docs/guides/enable-a-prover)'ye bakın.
+    - Daha fazla bilgi için [prover etkinleştirme](https://taiko.xyz/docs/guides/enable-a-prover)'ye bakın.
 
 7. Node'u başlatın
 
-- Eğer alpha-1 testnet node'u çalıştırdıysanız, önce eski volumleri kaldırmak için `docker-compose down -v` komutunu çalıştırmanız gerekir.
+    - Eğer alpha-1 testnet node'u çalıştırdıysanız, önce eski volumleri kaldırmak için `docker-compose down -v` komutunu çalıştırmanız gerekir.
 
-- Ayrıca, genesis bloğundan senkronize etmek biraz zaman alabilir. Bu ilerlemeyi loglar ile veya yerel grafana  kontrol panelinde izleyebilirsiniz. Güncel L2 block durumunu [Taiko alpha-2 block explorer](https://explorer.a2.taiko.xyz) görebilirsiniz.
+    - Ayrıca, genesis bloğundan senkronize etmek biraz zaman alabilir. Bu ilerlemeyi loglar ile veya yerel grafana  kontrol panelinde izleyebilirsiniz. Güncel L2 block durumunu [Taiko alpha-2 block explorer](https://explorer.a2.taiko.xyz) görebilirsiniz.
 
-- Docker'ın çalıştığından emin olun ve ardından node'u başlatmak için aşağıdaki komutu çalıştırın. Eğer arka planda çalıştırmak istiyorsanız, lütfen `-d` flag'ını ekleyin (`docker-compose up -d`).
+    - Docker'ın çalıştığından emin olun ve ardından node'u başlatmak için aşağıdaki komutu çalıştırın. Eğer arka planda çalıştırmak istiyorsanız, lütfen `-d` flag'ını ekleyin (`docker-compose up -d`).
 
-  ```bash
-  sudo docker-compose up
-  ```
+    ```bash
+    sudo docker-compose up
+    ```
 
-- Node'u arka planda çalıştırmak için (`detached mode`) `-d` flag'ını kullanın:
+    - Node'u arka planda çalıştırmak için (`detached mode`) `-d` flag'ını kullanın:
 
-  ```bash
-  sudo docker-compose up -d
-  ```
+    ```bash
+    sudo docker-compose up -d
+    ```
 
 8. İlerlemeyi kontrol etmek ve durum panosunu görüntülemek için logları izleyin (isteğe bağlı)
 
-- Aşağıdaki komutu terminalinizde çalıştırarak node'un senkronizasyonunun ilerlemesini kontrol etmek için logları izleyebilirsiniz:
+    - Aşağıdaki komutu terminalinizde çalıştırarak node'un senkronizasyonunun ilerlemesini kontrol etmek için logları izleyebilirsiniz:
 
-  ```bash
-  sudo docker-compose logs -f
-  ```
+    ```bash
+    sudo docker-compose logs -f
+    ```
 
-- Ek olarak, Prometheus veri kaynağına sahip bir Grafana kontrol paneli, L2 yürütme motorunun gerçek zamanlı durumunu göstermek için kullanılabilir. SSH tünelleme kullanarak bağlantı noktasını yönlendirerek paneli görüntüleyebilirsiniz. Önce, aşağıdaki komutu çalıştırın:
+    - Ek olarak, Prometheus veri kaynağına sahip bir Grafana kontrol paneli, L2 yürütme motorunun gerçek zamanlı durumunu göstermek için kullanılabilir. SSH tünelleme kullanarak bağlantı noktasını yönlendirerek paneli görüntüleyebilirsiniz. Önce, aşağıdaki komutu çalıştırın:
 
     ```bash
     sudo apt-get install -y socat
     socat TCP-LISTEN:3000,fork TCP:localhost:3000
     ```
 
-  Web tarayıcınızda `http://<your-instance-external-ip>:3000` adresine giderek gösterge tablosuna erişin.
+    Web tarayıcınızda `http://<your-instance-external-ip>:3000` adresine giderek gösterge tablosuna erişin.
 
-  Ardından, web tarayıcınızı açın ve `http://<your-instance-external-ip>:3000/d/L2ExecutionEngine/l2-execution-engine-overview?orgId=1&refresh=10s` adresine gidin. Bu, L2 yürütme motorunun gerçek zamanlı durumunu içeren Grafana panosunu görüntüleyecektir.
+    Ardından, web tarayıcınızdan `http://<your-instance-external-ip>:3000/d/L2ExecutionEngine/l2-execution-engine-overview?orgId=1&refresh=10s` adresine gidin. Bu, L2 yürütme motorunun gerçek zamanlı durumunu içeren Grafana panosunu görüntüleyecektir.
 
 9. Node'u durdurmak için
 
-```bash
-sudo docker-compose down
-```
+    ```bash
+    sudo docker-compose down
+    ```
 
 10. Node'u kaldırmak için
 
-```bash
-sudo docker compose down -v
-sudo rm -f .env
-```
+    ```bash
+    sudo docker compose down -v
+    sudo rm -f .env
+    ```
 
 11. Node'u güncellemek için
 
-```bash
-sudo docker compose pull
-```
+    ```bash
+    sudo docker compose pull
+    ```
 
 
 ### Kaynaklar
