@@ -106,20 +106,20 @@
 
   Ardından, web tarayıcınızı açın ve `http://<your-instance-external-ip>:3000/d/L2ExecutionEngine/l2-execution-engine-overview?orgId=1&refresh=10s` adresine gidin. Bu, L2 yürütme motorunun gerçek zamanlı durumunu içeren Grafana panosunu görüntüleyecektir.
 
-10. Node'u durdurmak için
+9. Node'u durdurmak için
 
 ```bash
 sudo docker-compose down
 ```
 
-11. Node'u kaldırmak için
+10. Node'u kaldırmak için
 
 ```bash
 sudo docker compose down -v
 sudo rm -f .env
 ```
 
-12. Node'u güncelleyin için
+11. Node'u güncellemek için
 
 ```bash
 sudo docker compose pull
