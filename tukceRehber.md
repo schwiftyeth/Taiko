@@ -7,14 +7,14 @@
 - 2+ çekirdekli CPU
 - 4GB RAM
 - Mainnet'i senkronize etmek için 1 TB boş depolama alanı
-- 8 MBit/sn indirme İnternet hizmeti
+- 8 MBit/sn download hızı
 
 #### Önerilen:
 
 - 4+ çekirdekli hızlı CPU
 - 16GB+ RAM
 - En az 1 TB boş alana sahip yüksek performanslı SSD
-- 25+ MBit/sn indirme İnternet hizmeti
+- 25+ MBit/sn download hızı
 
 ### Ön Gereksinimler
 
@@ -35,7 +35,7 @@
    sudo apt-get install git docker.io
    ```
 
-4. Taiko Node repositorysini klonlayın:
+4. Taiko Node repository'sini klonlayın:
 
    ```bash
    git clone https://github.com/taikoxyz/simple-taiko-node.git
@@ -65,9 +65,9 @@
 
   Birkaç yerden Sepolia L1 uç noktası alabilirsiniz, Alchemy ve Infura iki popüler RPC sağlayıcısıdır. RPC'yi Ethereum mainnet olarak değil Sepolia testnet olarak seçtiğinizden emin olun.
 
-6. Node'unuzu bir prover olarak etkinleştirin (bir prover çalıştırmak istiyorsanız isteğe bağlıdır. Ben bu adımı yapmadım)
+6. Node'unuzu prover olarak etkinleştirin (bir prover çalıştırmak istiyorsanız, isteğe bağlıdır. Ben bu adımı yapmadım)
 
-- Daha fazla bilgi için [bir prover etkinleştirme](https://taiko.xyz/docs/guides/enable-a-prover)'ye bakın.
+- Daha fazla bilgi için [prover etkinleştirme](https://taiko.xyz/docs/guides/enable-a-prover)'ye bakın.
 
 7. Node'u başlatın
 
@@ -89,7 +89,7 @@
 
 8. İlerlemeyi kontrol etmek ve durum panosunu görüntülemek için logları izleyin (isteğe bağlı)
 
-- Aşağıdaki komutu terminalinizde çalıştırarak düğüm senkronizasyonunun ilerlemesini kontrol etmek için günlükleri izleyebilirsiniz:
+- Aşağıdaki komutu terminalinizde çalıştırarak node'un senkronizasyonunun ilerlemesini kontrol etmek için logları izleyebilirsiniz:
 
   ```bash
   sudo docker-compose logs -f
