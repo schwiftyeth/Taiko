@@ -65,7 +65,7 @@
 
   Birkaç yerden Sepolia L1 uç noktası alabilirsiniz, Alchemy ve Infura iki popüler RPC sağlayıcısıdır. RPC'yi Ethereum mainnet olarak değil Sepolia testnet olarak seçtiğinizden emin olun.
 
-6. Node'unuzu prover olarak etkinleştirin (bir prover çalıştırmak istiyorsanız, isteğe bağlıdır. Ben bu adımı yapmadım)
+6. Node'unuzu prover olarak etkinleştirin (bir prover çalıştırmak istiyorsanız, isteğe bağlıdır.)
 
 - Daha fazla bilgi için [prover etkinleştirme](https://taiko.xyz/docs/guides/enable-a-prover)'ye bakın.
 
