@@ -65,7 +65,7 @@
 
   You can get a Sepolia L1 endpoint from a few places, Alchemy and Infura are two popular RPC providers. Make sure you select the RPC as Sepolia testnet, and not Ethereum mainnet.
 
-6. Enable your node as a prover (optional if you want to run a prover. I didn't do this step)
+6. Enable your node as a prover (optional if you want to run a prover.)
 
 - See [enable a prover](https://taiko.xyz/docs/guides/enable-a-prover) for more information.
 
