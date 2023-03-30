@@ -87,13 +87,7 @@
   sudo docker-compose up -d
   ```
 
-8. View the node's logs
-
-   ```bash
-   sudo docker-compose logs -f
-   ```
-
-9. Monitor the logs to check the progress and view the status dashboard (optional)
+8. Monitor the logs to check the progress and view the status dashboard (optional)
 
 - You can monitor the logs to check the progress of the node synchronization by running the following command in your terminal:
 
