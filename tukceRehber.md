@@ -91,7 +91,7 @@
 
 - Aşağıdaki komutu terminalinizde çalıştırarak düğüm senkronizasyonunun ilerlemesini kontrol etmek için günlükleri izleyebilirsiniz:
 
-  ``bash
+  ```bash
   sudo docker-compose logs -f
   ```
 
