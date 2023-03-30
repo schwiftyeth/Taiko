@@ -106,20 +106,20 @@
 
   Then, open your web browser and go to `http://<your-instance-external-ip>:3000/d/L2ExecutionEngine/l2-execution-engine-overview?orgId=1&refresh=10s`. This will display the Grafana dashboard with the L2 execution engine's real-time status.
 
-10. Stop the node
+9. Stop the node
 
 ```bash
 sudo docker-compose down
 ```
 
-11. Remove a node
+10. Remove a node
 
 ```bash
 sudo docker compose down -v
 sudo rm -f .env
 ```
 
-12. Update a node
+11. Update a node
 
 ```bash
 sudo docker compose pull
