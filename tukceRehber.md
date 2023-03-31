@@ -31,7 +31,7 @@
 3. Gerekli paketleri yükleyin:
 
    ```bash
-   sudo apt-get güncellemesi
+   sudo apt-get update
    sudo apt-get install git docker.io
    ```
 
