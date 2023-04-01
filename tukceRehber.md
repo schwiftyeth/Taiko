@@ -59,8 +59,8 @@
     - Son olarak, aşağıdaki ortam değişkenlerini ayarlayın:
 
       ```bash
-      L1_ENDPOINT_HTTP=https://eth-mainnet.alchemyapi.io/v2/<YOUR-ALCHEMY-API-KEY>
-      L1_ENDPOINT_WS=wss://eth-mainnet.ws.alchemyapi.io/v2/<YOUR-ALCHEMY-API-KEY>
+      L1_ENDPOINT_HTTP=https://eth-sepolia.g.alchemy.com/v2/<YOUR-ALCHEMY-API-KEY>
+      L1_ENDPOINT_WS=wss://eth-sepolia.g.alchemy.com/v2/<YOUR-ALCHEMY-API-KEY>
       ```
 
     Birkaç yerden Sepolia L1 uç noktası alabilirsiniz, Alchemy ve Infura iki popüler RPC sağlayıcısıdır. RPC'yi Ethereum mainnet olarak değil Sepolia testnet olarak seçtiğinizden emin olun.
